@@ -1,3 +1,4 @@
+
 console.log("Hello Ashiv! from pwd strength checker.")
 
 window.addEventListener('mouseup',wordSelected);
@@ -23,7 +24,7 @@ document.addEventListener("mouseup", function(event) {
     // Send a message to your background script to open the extension popup.
     chrome.runtime.sendMessage({ openPopup: true, selectedText: selectedText });
   }
-});
+});,
 
 
 

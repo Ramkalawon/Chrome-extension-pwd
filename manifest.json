@@ -2,17 +2,20 @@
     "manifest_version": 2,
     "name": "Password Strength Checker",
     "version": "1.0",
-
-     "background": {
-    "scripts": ["background.js"]
-    },
-
     "description": "A browser extension that adds a password strength checker to web pages.",
-
-
     "permissions": ["activeTab", "tabs"],
-
-
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+      }
+    },
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
@@ -20,32 +23,17 @@
         "css": ["style.css"]
       }
     ],
+
     "options_ui": {
-        "page": "popup.html"
+      "page": "popup.html"
     },
-    "icons": {
-      "16": "icon-16.png",
-      "48": "icon-48.png",
-      "128": "icon-128.png"
-    },
-
-    "browser_action": {
-      
-        "default_icon": "icon-16.png"
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+          "16": "icon-16.png",
+          "48": "icon-48.png",
+          "128": "icon-128.png"
+      }
     }
-  }
-
-
-
+}
   
-
- 
-
-
-
-
-
-
-
-
-
