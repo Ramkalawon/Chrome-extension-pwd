@@ -1,17 +1,15 @@
 
 
-console.log('background running')
+console.log('background.js running')
 
-// chrome.runtime.onMessage.addListener(receiver);
+chrome.runtime.onMessage.addListener(receiver);
 
-// window.pwd="";
-
-// function receiver(request, sender, sendResponse){
-//     console.log(request)
-//     window.pwd=request.text;
-
-//     console.log(window.pwd)
-    
-// }
+function receiver(request, sender, sendResponse){
+    console.log(request)
+    let pwd = request.text;
+    console.log(pwd)
+    // sendResponse({ message: "Message received in the background script" }); 
+    // console.log(sender)  
+}
 
 

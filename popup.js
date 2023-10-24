@@ -1,14 +1,11 @@
 
-console.log ("Hello ashiv from chrome extension pwd strength checker")
+console.log ("Hello from popup.js ")
 
-
-let bgpage= chrome.extension.getBackgroundPage();
-let password = bgpage.pwd;
-
+// let bgpage= chrome.extension.getBackgroundPage();
+// let password = bgpage.pwd;
 // console.log (password)
 
 // if password is not "" then execute 
-
 
 // Function to validate password against a set of requirements
 function validatePassword(password) {
@@ -150,12 +147,7 @@ if (strength <= 33) {
 
     // Get the value of the password input field
 
-      // let password = document.querySelector('#myPassword').value;
-
-
-
-        
- 
+      // let password = document.querySelector('#myPassword').value; 
       // var myVariable = password;
       // document.getElementById("demo").innerHTML = myVariable;
  
@@ -217,24 +209,13 @@ if (strength <= 33) {
   strengthText.textContent = 'Strong';
 }
 
-
 /////////////////////////////////////////////////
-
-
-
-
-
 
 // Select the input field with the ID "myPassword"
 let pswrd = document.querySelector('#myPassword');
 
-
-
-
 // Select the button with the ID "showButton"
 let showButton = document.querySelector('#showButton');
-
-
 
 // Add a click event listener to the "showButton"
 showButton.addEventListener('click', function() {
